@@ -6,11 +6,9 @@ import (
 )
 
 func max(sl []string) string {
-	m := 0
 	str := ""
 	for _, n := range sl {
-		if utf8.RuneCountInString(n) > m {
-			m = utf8.RuneCountInString(n)
+		if utf8.RuneCountInString(n) > utf8.RuneCountInString(str) { 
 			str = n
 		}
 	}
