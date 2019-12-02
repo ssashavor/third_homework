@@ -6,16 +6,14 @@ import (
 )
 
 func printsorted(m map[int]string) {
-	printValues := make([]string, 0)
 	sliceOfKeys := make([]int, 0)
 	for k := range m {
 		sliceOfKeys = append(sliceOfKeys, k)
 	}
 	sort.Ints(sliceOfKeys)
 	for i := range sliceOfKeys {
-		printValues = append(printValues, m[sliceOfKeys[i]])
+		 fmt.Println(m[sliceOfKeys[i]])
 	}
-	fmt.Println(printValues)
 }
 
 func main() {
